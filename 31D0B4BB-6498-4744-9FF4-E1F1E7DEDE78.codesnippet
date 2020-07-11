@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>MyTestImageView</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#ifdef DEBUG
+        // FIXME: tory_fix_test
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UIWindow *window = [UIApplication sharedApplication].delegate.window;
+            UIImageView *imageView = [window viewWithTag:10200202];
+            UILabel *label = [window viewWithTag:10200203];
+            if (imageView == nil) {
+                CGFloat width = 80.f;
+                CGFloat y = 100.f;
+                
+                imageView = [[UIImageView alloc] init];
+                imageView.tag = 10200202;
+                imageView.frame = CGRectMake(CGRectGetWidth(window.frame) - width, y, width, width);
+                imageView.backgroundColor = [UIColor greenColor];
+                [window addSubview:imageView];
+                
+                label = [[UILabel alloc] init];
+                label.tag = 10200203;
+                label.frame = CGRectMake(CGRectGetWidth(window.frame) - 200, CGRectGetMaxY(imageView.frame), 200, 40);
+                label.textColor = [UIColor redColor];
+                label.backgroundColor = [UIColor blueColor];
+                [window addSubview:label];
+            }
+            imageView.image = image;
+            label.text = [NSString stringWithFormat:@"qurey key: %@", key];
+        });
+#endif</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>31D0B4BB-6498-4744-9FF4-E1F1E7DEDE78</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>测试图片显示内容</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>My test imageView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

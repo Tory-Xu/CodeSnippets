@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>TestRandomColor</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)subviewsWithRandomColor:(UIView *)superView {
+#ifdef DEBUG
+    NSArray&lt;UIView *&gt; *subviews = superView.subviews;
+    [subviews enumerateObjectsUsingBlock:^(UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        obj.backgroundColor = [UIColor colorWithRed:arc4random_uniform(256)/256.0
+                                              green:arc4random_uniform(256)/256.0
+                                               blue:arc4random_uniform(256)/256.0
+                                              alpha:1.f];
+    }];
+    #endif
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>BA185A10-A5C0-470C-BE5D-6E52C8D78824</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Test Random Color</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
